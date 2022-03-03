@@ -33,12 +33,17 @@ app.get('/savings', (req,res)=> {
 });
 
 app.get('/checking', (req,res)=>{
-    res.render('')
-})
+    res.render('account', {
+        account:accounts.checking
+    });
+});
+
 
 app.get('/credit', (req,res)=>{
-    res.render('')
-})
+    res.render('account', {
+        account:accounts.credit
+    });
+});
 
 app.get('/profile', (req,res)=>{
     res.render('profile', {
